@@ -23,7 +23,18 @@ contract marketSentiment{
         string ticker
      );
 
-     
+     mapping(string => ticker) private Tickers;
+
+     function addTicker(string memory _ticker) public {
+        require(msg.sender == owner, "Only the owner can create tickers");
+        ticker storage newTicker = Tickers[_ticker];
+        newTicker.exists = true;
+        tickersArray.push(_ticker);
+     }
+
+
+
+
     
 }
 
