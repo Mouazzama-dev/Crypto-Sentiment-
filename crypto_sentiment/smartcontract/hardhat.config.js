@@ -1,5 +1,3 @@
-const { task } = require("hardhat/config");
-
 require("@nomicfoundation/hardhat-toolbox");
 require("@nomiclabs/hardhat-etherscan");
 require("@nomiclabs/hardhat-waffle");
