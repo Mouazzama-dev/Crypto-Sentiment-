@@ -4,12 +4,12 @@ const hre = require("hardhat");
 async function main() {
   
   const MarketSentiment = await hre.ethers.getContractFactory("MarketSentiment");
-  const marketSentiment = await MarketSentiment.deploy("Hello Hardhat!");
+  const marketSentiment = await MarketSentiment.deploy();
 
   await marketSentiment.deployed();
 
   console.log(
-    `Market sentiment deployed `
+    "Market sentiment deployed to :  " , marketSentiment.address
   );
 }
 
